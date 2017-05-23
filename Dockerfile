@@ -26,5 +26,9 @@ RUN cd /opt/openstack-ansible/playbooks/inventory/group_vars && \
     sed -i 's/#repo_build_git_cache/repo_build_git_cache/g' repo_all.yml
 
 RUN mkdir -p /opt/git/openstack
-
-ADD ./openstack /opt/git/openstack
+ADD sources-branch-updater.sh /opt/git/sources-branch-updater.sh
+ADD openstack_services.yml /opt/git/openstack_services.yml
+ADD get_openstack_code.sh /opt/git/get_openstack_code.sh
+RUN chmod +x /opt/git/*.sh
+RUN /opt/git/get_openstack_code.sh
+ 

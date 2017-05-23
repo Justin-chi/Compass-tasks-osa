@@ -72,9 +72,10 @@ for repo in $(grep 'git_repo\:' ${SERVICE_FILE}); do
   # Get the branch data
   branch_data=$(git ls-remote ${repo_address} | grep "${OS_BRANCH}$")
 
+  echo "branch data is ${branch_data}"
+
   # If there is branch data continue
   if [ ! -z "${branch_data}" ];then
-
     # Set the branch sha for the head of the branch
     branch_sha=$(echo "${branch_data}" | awk '{print $1}')
 
@@ -84,24 +85,26 @@ for repo in $(grep 'git_repo\:' ${SERVICE_FILE}); do
     # Write the branch entry into the repo_packages file
     sed -i.bak "s|${repo_name}_git_install_branch:.*|${repo_name}_git_install_branch: $branch_entry|" ${SERVICE_FILE}
 
+    echo "openstack service list is ${OPENSTACK_SERVICE_LIST}"
+    echo "repo name is ${repo_name}"
     # If the repo is in the specified list, then action the additional updates
-    if [[ "${OPENSTACK_SERVICE_LIST}" =~ "${repo_name}" ]]; then
-      os_repo_tmp_path="./openstack/${repo_name}"
-      osa_repo_tmp_path="/osa/${repo_name}"
+#    if [[ "${OPENSTACK_SERVICE_LIST}" =~ "${repo_name}" ]]; then
+    os_repo_tmp_path="./openstack/${repo_name}"
+    osa_repo_tmp_path="/osa/${repo_name}"
 
       # Ensure that the temp path doesn't exist
-      rm -rf ${os_repo_tmp_path} ${osa_repo_tmp_path}
+    rm -rf ${os_repo_tmp_path} ${osa_repo_tmp_path}
 
       # Do a shallow clone of the OpenStack repo to work with
-      if git clone --branch ${OS_BRANCH} --no-checkout --single-branch ${repo_address} ${os_repo_tmp_path}; then
-        pushd ${os_repo_tmp_path} > /dev/null
-          git checkout ${branch_sha}
-        popd > /dev/null
-      fi
+    if git clone --branch ${OS_BRANCH} --no-checkout --single-branch ${repo_address} ${os_repo_tmp_path}; then
+      pushd ${os_repo_tmp_path} > /dev/null
+        git checkout ${branch_sha}
+      popd > /dev/null
+    fi
 
       # Clean up the temporary files
       # rm -rf ${os_repo_tmp_path} ${osa_repo_tmp_path}
-    fi
+   # fi
   fi
 
   echo -e "Processed $repo_name @ $branch_entry\n"
