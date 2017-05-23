@@ -1,0 +1,209 @@
+---
+# Copyright 2014, Rackspace US, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+## NOTICE on items in this file:
+##   * If you use anything in the *._git_install_branch field that is not a TAG
+##     make sure to leave an in-line comment as to "why".
+
+## For the sake of anyone else editing this file:
+##   * If you add services to this file please do so in alphabetical order.
+##   * Every entry should be name spaced with the name of the client followed by an "_"
+##   * All items with this file should be separated by `name_` note that the name of the
+##     package should be one long name with no additional `_` separating it.
+
+
+### Before this is shipped all of these services should have a tag set as the branch,
+### or have a comment / reason attached to them as to why a tag can not work.
+
+
+## Global Requirements
+requirements_git_repo: https://git.openstack.org/openstack/requirements
+requirements_git_install_branch: cbda84e5ef30d28e8c681642dae7cdb75ef16880 # HEAD of "stable/ocata" as of 23.05.2017
+
+
+## Aodh service
+aodh_git_repo: https://git.openstack.org/openstack/aodh
+aodh_git_install_branch: 5c6b46ecc85743798c04b2d5fd094a0e9ef661a7 # HEAD of "stable/ocata" as of 23.05.2017
+aodh_git_project_group: aodh_all
+
+
+## Barbican service
+barbican_git_repo: https://git.openstack.org/openstack/barbican
+barbican_git_install_branch: b04aa152843d9cda3b11e8736e740c71fd798d0f # HEAD of "stable/ocata" as of 23.05.2017
+barbican_git_project_group: barbican_all
+
+
+## Ceilometer service
+ceilometer_git_repo: https://git.openstack.org/openstack/ceilometer
+ceilometer_git_install_branch: 1cc40682982e73c914c3f00bdf7a1ef7d03b2f31 # HEAD of "stable/ocata" as of 23.05.2017
+ceilometer_git_project_group: ceilometer_all
+
+
+## Cinder service
+cinder_git_repo: https://git.openstack.org/openstack/cinder
+cinder_git_install_branch: 1ef2f700422df90d5ce3224bdbd759d16ffd635f # HEAD of "stable/ocata" as of 23.05.2017
+cinder_git_project_group: cinder_all
+
+
+## Designate service
+designate_git_repo: https://git.openstack.org/openstack/designate
+designate_git_install_branch: 9c8bad11d9588cbf4a73a276eb5457f3e64c6a40 # HEAD of "stable/ocata" as of 23.05.2017
+designate_git_project_group: designate_all
+
+
+## Horizon Designate dashboard plugin
+designate_dashboard_git_repo: https://git.openstack.org/openstack/designate-dashboard
+designate_dashboard_git_install_branch: fb8108354937ef6d3a1bb389481af79681f7c5b3 # HEAD of "stable/ocata" as of 23.05.2017
+designate_dashboard_git_project_group: horizon_all
+
+
+## Dragonflow service
+dragonflow_git_repo: https://git.openstack.org/openstack/dragonflow
+dragonflow_git_install_branch: b72ffa06721faf95f42c9702f60a9acc3a7d8b61 # HEAD of "stable/ocata" as of 23.05.2017
+dragonflow_git_project_group: neutron_all
+
+
+## Glance service
+glance_git_repo: https://git.openstack.org/openstack/glance
+glance_git_install_branch: 57c4d7d78f37e840660719b944ebabe91cbf231b # HEAD of "stable/ocata" as of 23.05.2017
+glance_git_project_group: glance_all
+
+
+## Heat service
+heat_git_repo: https://git.openstack.org/openstack/heat
+heat_git_install_branch: 6ebcfb3fe85a7ee878045a6a29b44fca684f3eea # HEAD of "stable/ocata" as of 23.05.2017
+heat_git_project_group: heat_all
+
+
+## Horizon service
+horizon_git_repo: https://git.openstack.org/openstack/horizon
+horizon_git_install_branch: 53e8d0744dbbcd5d243b0f8b5993ff0fad4ca13d # HEAD of "stable/ocata" as of 23.05.2017
+horizon_git_project_group: horizon_all
+
+## Horizon Ironic dashboard plugin
+ironic_dashboard_git_repo: https://git.openstack.org/openstack/ironic-ui
+ironic_dashboard_git_install_branch: 565fc3f27881467a2b0a13c72d32acd8f24a4f7a # HEAD of "stable/ocata" as of 23.05.2017
+ironic_dashboard_git_project_group: horizon_all
+
+## Horizon Magnum dashboard plugin
+magnum_dashboard_git_repo: https://git.openstack.org/openstack/magnum-ui
+magnum_dashboard_git_install_branch: 369d3e0bf9bb562c28bb975736694b598109310a # HEAD of "stable/ocata" as of 23.05.2017
+magnum_dashboard_git_project_group: horizon_all
+
+## Horizon LBaaS dashboard plugin
+neutron_lbaas_dashboard_git_repo: https://git.openstack.org/openstack/neutron-lbaas-dashboard
+neutron_lbaas_dashboard_git_install_branch: 834ea9dd7aeaefed397d6d510b7527ce0fa5bd33 # HEAD of "stable/ocata" as of 23.05.2017
+neutron_lbaas_dashboard_git_project_group: horizon_all
+
+## Horizon Sahara dashboard plugin
+sahara_dashboard_git_repo: https://git.openstack.org/openstack/sahara-dashboard
+sahara_dashboard_git_install_branch: 919ab93f46a2d0bf757610c09e1da3484fcdc8c0 # HEAD of "stable/ocata" as of 23.05.2017
+sahara_dashboard_git_project_group: horizon_all
+
+
+## Keystone service
+keystone_git_repo: https://git.openstack.org/openstack/keystone
+keystone_git_install_branch: e1ee00f1dfdb62383b3b0c0528fa59f2af4c7040 # HEAD of "stable/ocata" as of 23.05.2017
+keystone_git_project_group: keystone_all
+
+
+## Neutron service
+neutron_git_repo: https://git.openstack.org/openstack/neutron
+neutron_git_install_branch: 83dd4ae848fcf5ac565d9c4599113f0ee0258bf4 # HEAD of "stable/ocata" as of 23.05.2017
+neutron_git_project_group: neutron_all
+
+neutron_lbaas_git_repo: https://git.openstack.org/openstack/neutron-lbaas
+neutron_lbaas_git_install_branch: 47ffd1343f194f805ec203a5dc6e5844f1d038ea # HEAD of "stable/ocata" as of 23.05.2017
+neutron_lbaas_git_project_group: neutron_all
+
+neutron_vpnaas_git_repo: https://git.openstack.org/openstack/neutron-vpnaas
+neutron_vpnaas_git_install_branch: f2953343806c513675450c4fc132c2c2ded12e02 # HEAD of "stable/ocata" as of 23.05.2017
+neutron_vpnaas_git_project_group: neutron_all
+
+neutron_fwaas_git_repo: https://git.openstack.org/openstack/neutron-fwaas
+neutron_fwaas_git_install_branch: e32e82de454f4f7788caade52e973662b7c85a33 # HEAD of "stable/ocata" as of 23.05.2017
+neutron_fwaas_git_project_group: neutron_all
+
+neutron_dynamic_routing_git_repo: https://git.openstack.org/openstack/neutron-dynamic-routing
+neutron_dynamic_routing_git_install_branch: 4b6afd41961743353400f78ddcbc4a5d34665468 # HEAD of "stable/ocata" as of 23.05.2017
+neutron_dynamic_routing_git_project_group: neutron_all
+
+
+## Nova service
+nova_git_repo: https://git.openstack.org/openstack/nova
+nova_git_install_branch: 97441fe3982c651d60586e80825d45f9d4d83113 # HEAD of "stable/ocata" as of 23.05.2017
+nova_git_project_group: nova_all
+
+
+## PowerVM Virt Driver
+nova_powervm_git_repo: https://git.openstack.org/openstack/nova-powervm
+nova_powervm_git_install_branch: 7913a0807bfc7eab88bca5af05f654e316841289 # HEAD of "stable/ocata" as of 23.05.2017
+nova_powervm_git_project_group: nova_compute
+
+
+## LXD Virt Driver
+nova_lxd_git_repo: https://git.openstack.org/openstack/nova-lxd
+nova_lxd_git_install_branch: d7b8e7013be4208c699ecde4224f03bc31d56cf8 # HEAD of "stable/ocata" as of 23.05.2017
+nova_lxd_git_project_group: nova_compute
+
+
+## Sahara service
+sahara_git_repo: https://git.openstack.org/openstack/sahara
+sahara_git_install_branch: d38cb7693b13ed0add5ab2383a02d7b8b495fcc5 # HEAD of "stable/ocata" as of 23.05.2017
+sahara_git_project_group: sahara_all
+
+
+## Swift service
+swift_git_repo: https://git.openstack.org/openstack/swift
+swift_git_install_branch: e127f2277c4436a97f5b2d74307a31af2c98297f # HEAD of "stable/ocata" as of 23.05.2017
+swift_git_project_group: swift_all
+
+
+## Swift3 middleware
+swift3_git_repo: https://git.openstack.org/openstack/swift3
+swift3_git_install_branch: de8fe28278905678b84e95fa977aca01545a4b27 # HEAD of "master" as of 15.05.2017
+swift3_git_project_group: swift_all
+
+
+## Ironic service
+ironic_git_repo: https://git.openstack.org/openstack/ironic
+ironic_git_install_branch: 2df1cefbd701a051c7d6fef3a10163a653e8cbd3 # HEAD of "stable/ocata" as of 23.05.2017
+ironic_git_project_group: ironic_all
+
+## Magnum service
+magnum_git_repo: https://git.openstack.org/openstack/magnum
+magnum_git_install_branch: 907eeb28da0a03abb5b1c6702e53a32b576fec29 # HEAD of "stable/ocata" as of 23.05.2017
+magnum_git_project_group: magnum_all
+
+## Trove service
+trove_git_repo: https://git.openstack.org/openstack/trove
+trove_git_install_branch: be4d63612f6cca2b9d8a3e3903e9e5d02314323a # HEAD of "stable/ocata" as of 23.05.2017
+trove_git_project_group: trove_all
+
+## Horizon Trove dashboard plugin
+trove_dashboard_git_repo: https://git.openstack.org/openstack/trove-dashboard
+trove_dashboard_git_install_branch: e88344200a0b3e03f644a98723ff5fa1b670df7a # HEAD of "stable/ocata" as of 23.05.2017
+trove_dashboard_git_project_group: horizon_all
+
+## Octavia service
+octavia_git_repo: https://git.openstack.org/openstack/octavia
+octavia_git_install_branch: 289dbc42045f6034f0e744f3774467dbe1af3472 # HEAD of "stable/ocata" as of 23.05.2017
+octavia_git_project_group: octavia_all
+
+## Molteniron service
+molteniron_git_repo: https://git.openstack.org/openstack/molteniron
+molteniron_git_install_branch: 6eb00df34c25e156197b9b03f428cc5ef028b649 # HEAD of "master" as of 15.05.2017
+molteniron_git_project_group: molteniron_all
