@@ -31,4 +31,5 @@ ADD openstack_services.yml /opt/git/openstack_services.yml
 ADD get_openstack_code.sh /opt/git/get_openstack_code.sh
 RUN chmod +x /opt/git/*.sh
 RUN /opt/git/get_openstack_code.sh
- 
+
+RUN yum clean all
