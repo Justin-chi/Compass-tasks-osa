@@ -1,8 +1,0 @@
-- name: apt_package_pinning
-  scm: git
-  src: https://git.openstack.org/openstack/openstack-ansible-apt_package_pinning
-  version: d5c0d7e8d21fc1539cc043097e23851296e2dd95
-- name: pip_install
-  scm: git
-  src: https://git.openstack.org/openstack/openstack-ansible-pip_install
-  version: e142f5642646449d98cd65d8fd0690907c403801
