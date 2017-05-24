@@ -89,7 +89,7 @@ for repo in $(grep 'git_repo\:' ${SERVICE_FILE}); do
     echo "repo name is ${repo_name}"
     # If the repo is in the specified list, then action the additional updates
 #    if [[ "${OPENSTACK_SERVICE_LIST}" =~ "${repo_name}" ]]; then
-    os_repo_tmp_path="./openstack/${repo_name}"
+    os_repo_tmp_path="/opt/git/openstack/${repo_name}"
     osa_repo_tmp_path="/osa/${repo_name}"
 
       # Ensure that the temp path doesn't exist
