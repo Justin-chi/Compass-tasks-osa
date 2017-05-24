@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 git clone https://git.openstack.org/openstack/openstack-ansible /opt/openstack-ansible
 pushd /opt/openstack-ansible >/dev/null
 git checkout -b ocata remotes/origin/stable/ocata

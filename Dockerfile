@@ -9,7 +9,7 @@ RUN yum install https://rdoproject.org/repos/openstack-ocata/rdo-release-ocata.r
 COPY *.sh openstack_services.yml /opt/git/
 
 #run scripts
-RUN run.sh
+RUN /opt/git/run.sh
 
 #clean
 RUN yum clean all
