@@ -27,6 +27,5 @@ mkdir -p /opt/git/openstack
 
 pushd /opt/git > /dev/null
 ./sources-branch-updater.sh -o stable/ocata -b stable/ocata -s ./openstack_services.yml
-find ./openstack/ -name ".git" | xargs rm -rf
 popd
 
